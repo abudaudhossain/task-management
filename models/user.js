@@ -1,9 +1,9 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const field ={
-    "token":{
-        type:"string",
-        required:true,
+const field = {
+    "token": {
+        type: String,
+        required: true,
     },
     "name": {
         type: String,
@@ -19,10 +19,7 @@ const field ={
     },
     "rule":{
         type: String,
-        default: 'employee'
+        default: "employee"
     }
-} 
 
-const userSchema = mongoose.Schema(field,{timestamps: true}) 
-
-module.exports = mongoose.model("User", userSchema);
+}
