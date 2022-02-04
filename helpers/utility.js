@@ -46,4 +46,26 @@ const getToken = (content) => {
 }
 
 
-module.exports = {nameValidation, emailValidation, getToken}
+const isEmpty= (items) =>{
+    console.log(items)
+    for(let i = 0; i < items.length; i++){
+        if(items[i] === undefined){
+            return true;
+        }
+        else if (items[i].length === 0){
+            return true;
+        }
+    }
+
+    return false;
+}
+
+const passwordValidation = (num) => {
+    var re = /^(?=(.*[a-z]){3,})(?=(.*[A-Z]){2,})(?=(.*[0-9]){2,})(?=(.*[!@#$%^&*()\-__+.]){1,}).{8,}$/;
+    if (re.test(num))
+        return false;
+    else
+        return true;
+}
+
+module.exports = {nameValidation, emailValidation, getToken, isEmpty, passwordValidation}

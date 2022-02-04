@@ -23,3 +23,7 @@ const field = {
     }
 
 }
+
+const userSchema = mongoose.Schema(field, {timestamps: true})
+
+module.exports = mongoose.model("User",userSchema)
